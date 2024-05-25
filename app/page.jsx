@@ -173,7 +173,7 @@ export default function Home() {
         {error && <p className="error-text">{error}</p>}
         <div className="w-full flex justify-center md:justify-end my-5 md:m-0 relative">
           <div className="absolute z-0 h-px w-full bg-grey top-1/2 left-0"></div>
-          <button type="submit" className="absolute z-10 top-1/2 transform -translate-y-1/2 left-1/2 -translate-x-1/2">
+          <button type="submit" className="absolute z-10 top-1/2 transform -translate-y-1/2 left-1/2 -translate-x-1/2 md:left-full md:-translate-x-full">
             <Image 
               src={Arrow}
               alt="Submit"

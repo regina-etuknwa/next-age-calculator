@@ -27,5 +27,5 @@ input {
 }
 
 .age-text {
-  @apply text-4xl md:text-7xl font-bold
+  @apply text-5xl md:text-7xl font-bold
 }
