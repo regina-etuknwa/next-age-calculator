@@ -153,7 +153,7 @@ export default function Home() {
   return (
     <main className="w-full md:w-3/4 m-auto mt-6 md:mt-0 p-10 bg-white rounded-lg rounded-ee-4xl">
       <form className="w-full" onSubmit={calculateAge}>
-        <div className="flex gap-3 mb-3">
+        <div className="flex gap-3 mb-9">
           <div className="flex flex-col w-full">
             <label htmlFor="day">DAY</label>
             <input type="text" name="day" id="day" placeholder="DD" value={day} onChange={handleChange} ref={dayRef} />
@@ -171,8 +171,9 @@ export default function Home() {
           </div>
         </div>
         {error && <p className="error-text">{error}</p>}
-        <div className="w-full flex justify-center md:justify-end my-5 md:m-0">
-          <button type="submit" >
+        <div className="w-full flex justify-center md:justify-end my-5 md:m-0 relative">
+          <div className="absolute z-0 h-px w-full bg-grey top-1/2 left-0"></div>
+          <button type="submit" className="absolute z-10 top-1/2 transform -translate-y-1/2 left-1/2 -translate-x-1/2">
             <Image 
               src={Arrow}
               alt="Submit"
@@ -182,12 +183,12 @@ export default function Home() {
         </div>
       </form>
 
-      {!age && <div>
+      {!age && <div className="mt-9">
         <p className="age-text"><span className="text-primary" id="years">--</span> years</p>
         <p className="age-text"><span className="text-primary" id="months">--</span> months</p>
         <p className="age-text"><span className="text-primary" id="days">--</span> days</p>
       </div>}
-      {age && <div>
+      {age && <div className="mt-9">
         <p className="age-text"><span className="text-primary" id="years">{age.years}</span> years</p>
         <p className="age-text"><span className="text-primary" id="months">{age.months}</span> months</p>
         <p className="age-text"><span className="text-primary" id="days">{age.days}</span> days</p>
