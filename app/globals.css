@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply flex justify-center items-center p-10 bg-offwhite
+  @apply flex justify-center items-center p-5 md:p-10 bg-offwhite
 }
 
 label {
@@ -11,5 +11,21 @@ label {
 }
 
 input {
-  @apply text-3xl font-semibold border rounded-md border-grey p-3 w-full hover:border-primary active:border-primary focus:border-primary focus:outline-0 active:border-2 focus:border-2
+  @apply text-xl md:text-3xl font-semibold border rounded-md border-grey p-3 w-full hover:border-primary active:border-primary focus:border-primary focus:outline-0 active:border-2 focus:border-2
+}
+
+.error-text {
+  @apply text-error text-xs italic
+}
+
+.error {
+  @apply border-error 
+}
+
+.error-label {
+  @apply text-error
+}
+
+.age-text {
+  @apply text-6xl md:text-7xl font-bold
 }
