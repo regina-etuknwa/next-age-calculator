@@ -183,16 +183,12 @@ export default function Home() {
         </div>
       </form>
 
-      {!age && <div className="mt-9">
-        <p className="age-text"><span className="text-primary" id="years">--</span> years</p>
-        <p className="age-text"><span className="text-primary" id="months">--</span> months</p>
-        <p className="age-text"><span className="text-primary" id="days">--</span> days</p>
-      </div>}
-      {age && <div className="mt-9">
-        <p className="age-text"><span className="text-primary" id="years">{age.years}</span> years</p>
-        <p className="age-text"><span className="text-primary" id="months">{age.months}</span> months</p>
-        <p className="age-text"><span className="text-primary" id="days">{age.days}</span> days</p>
-      </div>}
+      <div className="mt-9">
+        <p className="age-text"><span className="text-primary" id="years">{age ? age.years : '--' }</span> years</p>
+        <p className="age-text"><span className="text-primary" id="months">{age ? age.months : '--' }</span> months</p>
+        <p className="age-text"><span className="text-primary" id="days">{age ? age.days : '--' }</span> days</p>
+      </div>
+      
     </main>
   );
 }
